@@ -7,7 +7,7 @@ Docker image for the Avahi mDNS/DNS-SD daemon. Built on Alpine Linux to make the
 Basic usage consists of running the docker container with the appropriate environment variables and volumes to achieve your desired behaviour.
 
 ```shell
-docker run flungo/avahi
+docker run robostlund/avahi
 ```
 
 ## Environment variables
@@ -71,7 +71,7 @@ To reflect mDNS broadcasts between two docker networks (`net1` and `net2` in the
 docker run -d --name=mdns-reflector \
   --network net1 \
   -e REFLECTOR_ENABLE_REFLECTOR=yes \
-  flungo/avahi
+  robostlund/avahi
 # Attach the container to the net2 network
 docker network connect net2 mdns-reflector
 ```
